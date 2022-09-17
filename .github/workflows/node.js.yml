@@ -26,8 +26,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
-      - run: npm run build
+      - name: Build
+        run: |
+          if [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+          npm run build
       - run: npm run export
 
       - name: Deploy 🚀
