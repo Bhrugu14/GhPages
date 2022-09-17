@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html,
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  place-items: center;
+  text-align: center;
+}
+.wrapper {
+  place-items: center;
+  text-align: center;
+  height: 100vh;
+}
+.ripple-button {
+  position: relative;
+  margin: 0 20px;
+  height: 60px;
+  min-width: 200px;
+  display: block;
+  line-height: 60px;
+  border-radius: 30px;
+  text-decoration: none;
+  background: rgb(0, 157, 255);
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+.ripple-button > span {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ripples 0.6s linear infinite;
+}
+@keyframes ripples {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+/* navbar */
+#navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* multi */
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bottomCard {
+  background-color: red;
+  height: 50vh;
+  min-width: 50vw;
+  margin-left: 50px;
+  /* position: absolute; */
+}
