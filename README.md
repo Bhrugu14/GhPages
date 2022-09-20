@@ -1,4 +1,4 @@
-# Github Pages Demo
+# Github Pages Demo for Next.js
 
 Node version :14.x
 
